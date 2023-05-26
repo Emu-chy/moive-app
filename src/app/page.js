@@ -1,9 +1,10 @@
 import React from "react";
+import Herosection from "./components/Herosection";
 
 const page = () => {
     return (
         <>
-            <h3>hello next js</h3>
+            <Herosection />
         </>
     );
 };
