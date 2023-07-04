@@ -12,8 +12,8 @@ const MovieCart = (currElm) => {
                     <Image src={backgroundImage.url} alt={title} width={250} height={200} />
                 </div>
                 <div className={styles.card_data}>
-                    <h2>{title}</h2>
-                    <p>{synopsis}</p>
+                    <h2>{title.substring(0, 18)}</h2>
+                    <p>{synopsis.substring(0, 56)}</p>
                     <Link href={`/movie/${id}`}>
                         <button>Read More</button>
                     </Link>

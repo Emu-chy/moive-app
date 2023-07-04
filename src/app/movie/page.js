@@ -4,7 +4,7 @@ import styles from "../styles/common.module.css";
 import MovieCart from "../components/MovieCart";
 
 const MoviePage = async () => {
-    const url = process.env.RAPID_KEY;
+    const url = process.env.RAPID_API;
     const options = {
         method: "GET",
         headers: {
@@ -24,9 +24,11 @@ const MoviePage = async () => {
             <section className={styles.movieSection}>
                 <div className={styles.container}>
                     <h1>Movie & Series</h1>
-                    {mainData.map((currElm) => {
-                        return <MovieCart key={currElm.id} {...currElm} />;
-                    })}
+                    <div className={styles.card_section}>
+                        {mainData.map((currElm) => {
+                            return <MovieCart key={currElm.id} {...currElm} />;
+                        })}
+                    </div>
                 </div>
             </section>
         </>
